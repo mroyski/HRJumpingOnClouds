@@ -1,14 +1,16 @@
-﻿using System;
+﻿//Rextester.Program.Main is the entry point for your code. Don't change it.
+//Compiler version 4.0.30319.17929 for Microsoft (R) .NET Framework 4.5
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
-namespace HRJumpingOnClouds
+namespace Rextester
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             int[] c = new int[] { 0, 1, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0,
                 1, 0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 0, 0, 1, 0,
@@ -19,27 +21,48 @@ namespace HRJumpingOnClouds
             int danger = 1;
             int jumps = 1;
 
-            for (int i = 1; i < n; i++)
+            for (int i = 1; i <= n; i++)
             {
                 if (c[i] == safe)
                 {
-                    if (c[i - 1] == danger)
+                    if (i < n - 1)
                     {
-                        jumps++;
-                        if (i < n - 1)
+                        if (c[i + 1] == safe && c[i + 2] == safe)
                         {
-                            if (c[i + 1] == safe && c[i + 2] == safe)
-                            {
-                                jumps++;
-                            }
+                            i++;
+                            jumps++;
+                        }
+                        else if (c[i + 1] == safe)
+                        {
+                            jumps++;
+                        }
+                        else if (c[i - 1] == danger && c[i + 1] == danger)
+                        {
+                            jumps++;
+                        }
+                        else if (c[i + 1] == danger)
+                        {
+                            jumps++;
                         }
                     }
-                    if (c[i + 1] == danger)
+                    else if (i < n)
                     {
-                        jumps++;
+                        if (c[i + 1] == safe)
+                        {
+                            jumps++;
+                        }
+                        else if (c[i - 1] == danger && c[i + 1] == danger)
+                        {
+                            jumps++;
+                        }
+                        else if (c[i + 1] == danger)
+                        {
+                            jumps++;
+                        }
                     }
                 }
             }
+            Console.WriteLine(c.Length);
             Console.WriteLine(jumps);
         }
     }
