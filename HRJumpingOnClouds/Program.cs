@@ -14,9 +14,10 @@ namespace HRJumpingOnClouds
             int n = clouds.Length;
             int safe = 0;
             int danger = 1;
-            int jumps = 1;
+            int position = 0;
+            int jumps = 0;
 
-            for (int i = 1; i < n; i++)
+            for (int i = 0; i < n; i++)
             {
                 if (clouds[i] == danger)
                 {
