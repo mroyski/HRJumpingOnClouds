@@ -10,8 +10,8 @@ namespace HRJumpingOnClouds
     {
         static void Main(string[] args)
         {
-            int[] clouds = new int[] { 0, 0, 1, 0, 0, 1, 0, };
-            int n = clouds.Length;
+            int[] clouds = new int[] { 0, 0, 1, 1, 0, 1, 0, };
+            int n = clouds.Length - 1;
             int safe = 0;
             int danger = 1;
             int position = 0;
@@ -25,6 +25,11 @@ namespace HRJumpingOnClouds
                     {
                         jumps++;
                     }
+                    else if (clouds[i + 1] == safe)
+                    {
+                        jumps++;
+                    }
+
                 }
             }
             Console.WriteLine(jumps);
