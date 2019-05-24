@@ -1,0 +1,7 @@
+C:\Users\Mike\source\repos\HRJumpingOnClouds\HRJumpingOnClouds\bin\Debug\HRJumpingOnClouds.exe.config
+C:\Users\Mike\source\repos\HRJumpingOnClouds\HRJumpingOnClouds\bin\Debug\HRJumpingOnClouds.exe
+C:\Users\Mike\source\repos\HRJumpingOnClouds\HRJumpingOnClouds\bin\Debug\HRJumpingOnClouds.pdb
+C:\Users\Mike\source\repos\HRJumpingOnClouds\HRJumpingOnClouds\obj\Debug\HRJumpingOnClouds.csprojAssemblyReference.cache
+C:\Users\Mike\source\repos\HRJumpingOnClouds\HRJumpingOnClouds\obj\Debug\HRJumpingOnClouds.csproj.CoreCompileInputs.cache
+C:\Users\Mike\source\repos\HRJumpingOnClouds\HRJumpingOnClouds\obj\Debug\HRJumpingOnClouds.exe
+C:\Users\Mike\source\repos\HRJumpingOnClouds\HRJumpingOnClouds\obj\Debug\HRJumpingOnClouds.pdb
